@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    input[type="radio"]:indeterminate+span {
+      color:red;
+    }
+    input[type="checkbox"]:checked+span {
+      color:orange;
+    }    
+    input[type="checkbox"]:enabled+span {
+      color:blue;
+    }   
+    input[type="radio"]:disabled+span {
+      color:green;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>jh</h1>
+    <a href ="https://github.com/kzh4295">jh</a>
+    <form action="https://github.com/kzh4295/" method ="get">
+      <input type="radio" value="item1" name="item" /><span>item1</span><br />
+      <input type="radio" value="item2" name="item" /><span>item2</span><br />
+
+      <input type="checkbox" value="check1" name="check" /><span>check1</span
+      ><br />
+      <input type="checkbox" value="check2" name="check" disabled /><span
+        >check2</span
+      ><br />
+
+      <input type="text" id="data" name="data" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+</html>
