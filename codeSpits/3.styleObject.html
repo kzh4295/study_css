@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>style Object</title>
+</head>
+<body>
+  <script>
+    const Style=(_=>{
+      const prop = new Map, prefix = 'webkit, moz, ms, chrome, o, khtml'.split(',');
+      const NONE = Symbol();
+      const BASE = document.body.style;
+      const getKey = key =>{
+        if(prop.has(key)) return prop.get(key);
+        if(key in BASE) prop.set(key, key);
+        else if(!prefix.some(v=>{
+          const newKey = v + key[0].toUpperCase + key.substr(1);
+          if(newKey in BASE){
+            prop.set(key, newKey)
+          }
+        }))
+      }
+
+    })
+  </script>
+</body>
+</html>
